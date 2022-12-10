@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popovers Componet!</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid justify-content-center">
+        <a class="navbar-brand text-white" href="#">
+          <img
+            src="../assets/bootstrap-logo.svg"
+            alt="Logo"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+          Bootstrap Final Proyect
+        </a>
+        <a
+          class="btn btn-primary"
+          role="button"
+          aria-disabled="true"
+          href="/index.html"
+          >Go Back</a
+        >
+      </div>
+    </nav>
+    <div class="container bg-light">
+      <h3>Popovers</h3>
+      <span>Example</span>
+      <h4>Popover example</h4>
+      <div class="container">
+        <button
+          type="button"
+          class="btn btn-lg btn-danger"
+          data-bs-toggle="popover"
+          data-bs-title="Popover title"
+          data-bs-content="And here's some amazing content. It's very engaging. Right?"
+        >
+          Click to toggle popover
+        </button>
+      </div>
+    </div>
+    <script defer>
+      const popoverTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="popover"]'
+      );
+      const popoverList = [...popoverTriggerList].map(
+        (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+      );
+    </script>
+  </body>
+</html>

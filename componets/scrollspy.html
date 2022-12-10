@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrollspy Componet!</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <script src="../js/bootstrap.bundle.min.js" defer></script>    
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid justify-content-center">
+        <a class="navbar-brand text-white" href="#">
+          <img
+            src="../assets/bootstrap-logo.svg"
+            alt="Logo"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+          Bootstrap Final Proyect
+        </a>
+        <a
+          class="btn btn-primary"
+          role="button"
+          aria-disabled="true"
+          href="../index.html"
+          >Go Back</a
+        >
+      </div>
+    </nav>
+    <div class="container bg-light">
+      <h3>Scrollspy</h3>
+      <span>Example</span>
+      <h4>Scrollspy example</h4>      
+    </div>
+    <div class="container">
+      <nav id="navbar-example2" class="navbar bg-light px-3 mb-3">
+        <a class="navbar-brand" href="#">Game Modes</a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading1">Conquest</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">Arena</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#scrollspyHeading3">Assault</a></li>
+              <li><a class="dropdown-item" href="#scrollspyHeading4">Joust</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#scrollspyHeading5">Slash</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-light p-3 rounded-2" tabindex="0">
+        <h4 id="scrollspyHeading1">Conquest</h4>
+        <p>Info:
+          Conquest is our premiere competitive mode and features a three-lane map surrounded by a jungle area. Your base, defended by three Phoenixes and a Titan, sits on one end. Your enemy's base is on the other.
+          Map Objective:
+          Destroy opposing towers, phoenixes, and Titan.
+          Other map objectives are the neutral buff camps, Portal Demon, Fire Giant, and Gold Fury.</p>
+        <h4 id="scrollspyHeading2">Arena</h4>
+        <p>Info:
+          The gladiators have called out for help and the gods have answered. The Arena game mode is a brawling deathmatch where your goal is to defeat enemy players and their minions by reducing their side's ticket count to zero. Average game time is around 15 minutes.
+          Map Objective:
+          Each side starts with 500 tickets.
+          Killing an enemy player deducts 5 tickets from the enemy tickets.
+          Killing 10 enemy players spawns a siege minion for your team.
+          Killing an enemy minion deducts 1 ticket from the enemy tickets.
+          Helping a friendly minion reach the enemy portal deducts 1 ticket from the enemy tickets.
+          Helping a friendly siege minion reach the enemy portal deducts 15 tickets from the enemy tickets.</p>
+        <h4 id="scrollspyHeading3">Assault</h4>
+        <p>Info:
+          Assault is similar to the regular conquest mode, but instead features a single lane and no jungle. Your goal is to help protect your base while attacking your enemies' defenses.
+          Map Objective:
+          Destroy opposing towers, phoenixes, and titan.
+          Once you leave your spawn area, you cannot return until you have died and respawed.
+          Solo and Parties of two, three, four, or five are allowed.</p>
+        <h4 id="scrollspyHeading4">Joust</h4>
+        <p>Info:
+          Joust mode features a single-lane map and a side jungle. Your base, defended by one Phoenix and a Titan, sits on one end. Your enemy's base is on the other. Average game time is around 15 minutes.
+          Map Objective:
+          Destroy the opposing tower, Phoenix and Titan.
+          Other map objectives are the neutral buff camps and the Bull Demon King.</p>
+        <h4 id="scrollspyHeading5">Slash</h4>
+        <p>Info:
+          Slash is a fun 5v5 mode highlighting the Egyptian and Maya Pantheons in SMITE. The Slash map features two lanes surrounded by a jungle area. This game also includes unique objectives like Apophis, a strong jungle camp, and Juggernauts, Apophis’s chosen warriors to help . A standard Slash game will take about 20 minutes, and you’ll earn the standard match rewards for this mode.
+          Map Objective:
+          Destroy opposing towers, phoenixes, and defeat the enemy Titan with the help of the unique jungle camps on the map.</p>
+      </div>
+    </div>
+  </body>
+</html>

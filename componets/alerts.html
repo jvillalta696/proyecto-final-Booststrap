@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alert Componet!</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <script src="../js/bootstrap.min.js" defer></script>    
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid justify-content-center">
+        <a class="navbar-brand text-white" href="#">
+          <img
+            src="../assets/bootstrap-logo.svg"
+            alt="Logo"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+          Bootstrap Final Proyect
+        </a>
+        <a
+          class="btn btn-primary"
+          role="button"
+          aria-disabled="true"
+          href="../index.html"
+          >Go Back</a
+        >
+      </div>
+    </nav>
+    <div class="container bg-light">
+      <h3>Alert</h3>
+      <span>Example</span>
+      <h4>Message Alert</h4>
+      <div id="liveAlertPlaceholder"></div>
+      <button type="button" class="btn btn-primary" id="liveAlertBtn">
+        Alert your Team
+      </button>
+    </div>
+    <script defer>
+      const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
+
+      const alert = (message, type) => {
+        const wrapper = document.createElement("div");
+        wrapper.innerHTML = [
+          `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+          `   <div>${message}</div>`,
+          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+          "</div>",
+        ].join("");
+
+        alertPlaceholder.append(wrapper);
+      };
+      const messageAlert = ()=>{
+        let msgs = ['Enemy Missing Left',
+        'Enemy Missing right',
+        'Group up',
+        'Gank']
+        const randomIndex = Math.round(Math.random()*(msgs.length-1));
+        return msgs[randomIndex];
+      }
+      const alertTrigger = document.getElementById("liveAlertBtn");
+      if (alertTrigger) {
+        alertTrigger.addEventListener("click", () => {
+          alert(messageAlert(), "success");
+        });
+      }
+    </script>
+  </body>
+</html>

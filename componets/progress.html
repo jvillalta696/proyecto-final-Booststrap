@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Componet!</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <script src="../js/bootstrap.min.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+      <div class="container-fluid justify-content-center">
+        <a class="navbar-brand text-white" href="#">
+          <img
+            src="../assets/bootstrap-logo.svg"
+            alt="Logo"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+          Bootstrap Final Proyect
+        </a>
+        <a
+          class="btn btn-primary"
+          role="button"
+          aria-disabled="true"
+          href="../index.html"
+          >Go Back</a
+        >
+      </div>
+    </nav>
+    <div class="container bg-light">
+      <h3>Progress</h3>
+      <span>Example</span>
+      <h4>Progress Bar</h4>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+            <button type="button" class="btn btn-secondary" onclick="loading()">
+              Load
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="progress">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              aria-label="Example with label"
+              style="width: 0%"
+              aria-valuenow="0"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script defer>
+      const progressbar = document.querySelectorAll(".progress-bar");
+      const loading = () => {
+        for (i = 1; i <= 4; i++) {
+           loadBar(i);
+        }
+      };
+
+      const loadBar = (i) => {
+        setTimeout(() => {
+          let progress = (i * 25).toString();
+          progressbar[0].ariaValueNow = progress;
+          progressbar[0].attributes[3].nodeValue = `width: ${progress}%`;
+          progressbar[0].innerHTML = progress+'%' 
+        }, i*1000);
+      };
+
+      console.log(progressbar);
+    </script>
+  </body>
+</html>
